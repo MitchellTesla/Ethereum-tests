@@ -1,4 +1,4 @@
-# Check the effects of tips on the miner's (coinbase) balance
+# Check the effects of maxPriorityFeePerGass on the miner's (coinbase) balance
 
 
 tips:
@@ -65,7 +65,7 @@ tips:
          }
       storage: {}
 
-    # When called without a tip, gives us the current baseFee
+    # When called without a maxPriorityFeePerGas, gives us the current baseFee
     0xcccccccccccccccccccccccccccccccccccccccd:
       balance: 0x10000000000
       nonce: 1
@@ -116,8 +116,8 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -128,20 +128,20 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
       value: 0x0
 
-  # Block 3, tip=1
+  # Block 3, maxPriorityFeePerGas=1
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -151,21 +151,21 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       value: 0x0
 
 
-  # Block 4, tip=1e6, so it's effectively feeCap-baseFee
+  # Block 4, maxPriorityFeePerGas=1e6, so it's effectively maxFeePerGas-baseFee
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -173,32 +173,32 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCD
       value: 0x0
-    # This transaction has an huge tip (1e6), and a much smaller feeCap (1e3). So
-    # the real tip amount is feeCap-baseFee
+    # This transaction has an huge maxPriorityFeePerGas (1e6), and a much smaller maxFeePerGas (1e3). So
+    # the real maxPriorityFeePerGas amount is maxFeePerGas-baseFee
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 100000000
-      feeCap: 1000
+      maxPriorityFeePerGas: 100000000
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       value: 0x0
 
 
-  # Block 5, multiple transactions
+  # Block 5, mulmaxPriorityFeePerGasle transactions
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -207,8 +207,8 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 1
-      feeCap: 1000
+      maxPriorityFeePerGas: 1
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -217,8 +217,8 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 1000000
-      feeCap: 9000000
+      maxPriorityFeePerGas: 1000000
+      maxFeePerGas: 9000000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -227,21 +227,21 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 1000000000000
-      feeCap: 9000000000000
+      maxPriorityFeePerGas: 1000000000000
+      maxFeePerGas: 9000000000000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       value: 0x0
 
 
-  # Block 6, tip=1 but there is an access list (one address, no storage cells)
+  # Block 6, maxPriorityFeePerGas=1 but there is an access list (one address, no storage cells)
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -251,21 +251,21 @@ tips:
       - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
         storageKeys: []
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       value: 0x0
 
 
-  # Block 7, tip=1 but there is an access list (one address, one storage cell)
+  # Block 7, maxPriorityFeePerGas=1 but there is an access list (one address, one storage cell)
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -276,47 +276,21 @@ tips:
         storageKeys:
         - 0x00
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       value: 0x0
 
 
-  # Block 8, tip=1 but there is an access list (two addresses, no storage cells)
+  # Block 8, maxPriorityFeePerGas=1 but there is an access list (two addresses, no storage cells)
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
-      nonce: auto
-      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
-      to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-      value: 0x0
-    - data: ''
-      accessList:
-      - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-        storageKeys: []
-      - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCD
-        storageKeys: []
-      gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
-      nonce: auto
-      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
-      to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-      value: 0x0
-
-
-  # Block 9, tip=1 but there is an access list (two addresses, one storage cell)
-  - transactions:
-    - data: ''
-      accessList: []
-      gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -326,11 +300,37 @@ tips:
       - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
         storageKeys: []
       - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCD
+        storageKeys: []
+      gasLimit: 100000	
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
+      nonce: auto
+      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
+      to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      value: 0x0
+
+
+  # Block 9, maxPriorityFeePerGas=1 but there is an access list (two addresses, one storage cell)
+  - transactions:
+    - data: ''
+      accessList: []
+      gasLimit: 100000	
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
+      nonce: auto
+      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
+      to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+      value: 0x0
+    - data: ''
+      accessList:
+      - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+        storageKeys: []
+      - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCD
         storageKeys:
         - 0x00
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -338,13 +338,13 @@ tips:
 
 
 
-  # Block 10, tip=1 but there is an access list (two addresses, two storage cells)
+  # Block 10, maxPriorityFeePerGas=1 but there is an access list (two addresses, two storage cells)
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -358,8 +358,8 @@ tips:
         storageKeys:
         - 0x00
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -367,13 +367,13 @@ tips:
 
 
 
-  # Block 11, tip=1 but there is an access list (two addresses, two storage cells in one)
+  # Block 11, maxPriorityFeePerGas=1 but there is an access list (two addresses, two storage cells in one)
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -387,21 +387,21 @@ tips:
       - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCD
         storageKeys: []
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       value: 0x0
 
 
-  # Block 12, tip=1 but there is an access list (two identical addresses, count as two)
+  # Block 12, maxPriorityFeePerGas=1 but there is an access list (two identical addresses, count as two)
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -413,21 +413,21 @@ tips:
       - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
         storageKeys: []
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       value: 0x0
 
 
-  # Block 13, tip=1 but there is an access list (2 identical addresses, 2 identical cells)
+  # Block 13, maxPriorityFeePerGas=1 but there is an access list (2 identical addresses, 2 identical cells)
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -441,8 +441,8 @@ tips:
       - address: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
         storageKeys: []
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -450,13 +450,13 @@ tips:
 
 
 
-  # Block 14, tip=1 for an invalid transaction
+  # Block 14, maxPriorityFeePerGas=1 for an invalid transaction
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -464,8 +464,8 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
@@ -473,13 +473,13 @@ tips:
 
 
 
-  # Block 15, tip=1 for an orderly revert
+  # Block 15, maxPriorityFeePerGas=1 for an orderly revert
   - transactions:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -487,8 +487,8 @@ tips:
     - data: ''
       accessList: []
       gasLimit: 100000	
-      tip: 0x01
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC
@@ -505,8 +505,8 @@ tips:
     - data: :raw 0x60A7
       accessList: []
       gasLimit: 100000	
-      tip: 0x00
-      feeCap: 1000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 1000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -522,14 +522,14 @@ tips:
       # Change in miner balance, minus the block reward
       0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC:
         storage:
-          # Two blocks without any tipped transactions
+          # Two blocks without any maxPriorityFeePerGasped transactions
           0x01:                 0
           0x02:                 0
 
           # Tip=1
           0x03:             21003  
    
-          # Tip=feeCap-baseFee 
+          # Tip=maxFeePerGas-baseFee 
           0x04:           8653236   # 21003 * 412
 
           # Three transactions:
@@ -551,7 +551,7 @@ tips:
           0x0C:             25803   # Two identical addresses
           0x0D:             29603   # Two identical addresses, two identical cells
 
-          # Invalid transactions still count for the tip
+          # Invalid transactions still count for the maxPriorityFeePerGas
           0x0E:            100000
 
           # As does an orderly revert
@@ -562,4 +562,4 @@ tips:
       # baseFee (where it's relevant)
       0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCD:
         storage:
-          0x04: 588     # so with a feeCap of 1000, we get a tip of 412
+          0x04: 588     # so with a maxFeePerGas of 1000, we get a maxPriorityFeePerGas of 412

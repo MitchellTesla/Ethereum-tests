@@ -1,6 +1,6 @@
-# Show the effect of feeCap. Transactions where baseFee+tip > feeCap don't happen.
+# Show the effect of maxFeePerGas. Transactions where baseFee+maxPriorityFeePerGas > maxFeePerGas don't happen.
 
-feeCap:
+maxFeePerGas:
   genesisBlockHeader:
     bloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
     coinbase: '0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba'
@@ -34,7 +34,7 @@ feeCap:
       code: ''
       storage: {}
 
-    # Store the fact we were called with this gasPrice (baseFee + tip)
+    # Store the fact we were called with this gasPrice (baseFee + maxPriorityFeePerGas)
     0xcccccccccccccccccccccccccccccccccccccccc:
       balance: 0x10000000000
       nonce: 1
@@ -54,8 +54,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x00
-      feeCap: 880
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -65,8 +65,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x01
-      feeCap: 880
+      maxPriorityFeePerGas: 0x01
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -76,8 +76,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x02
-      feeCap: 880
+      maxPriorityFeePerGas: 0x02
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -87,8 +87,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x03
-      feeCap: 880
+      maxPriorityFeePerGas: 0x03
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -98,8 +98,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x04
-      feeCap: 880
+      maxPriorityFeePerGas: 0x04
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -109,8 +109,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x05
-      feeCap: 880
+      maxPriorityFeePerGas: 0x05
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -120,8 +120,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x06
-      feeCap: 880
+      maxPriorityFeePerGas: 0x06
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -131,8 +131,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x07
-      feeCap: 880
+      maxPriorityFeePerGas: 0x07
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -142,8 +142,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x08
-      feeCap: 880
+      maxPriorityFeePerGas: 0x08
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -153,8 +153,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x09
-      feeCap: 880
+      maxPriorityFeePerGas: 0x09
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -164,8 +164,8 @@ feeCap:
     - data: ''
       accessList: []
       gasLimit: 50000	
-      tip: 0x0a
-      feeCap: 880
+      maxPriorityFeePerGas: 0x0a
+      maxFeePerGas: 880
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -184,10 +184,10 @@ feeCap:
           0x36d: 1
           0x36e: 1
           0x36f: 1
-          0x370: 1  # gasPrice 880 (= feeCap)
+          0x370: 1  # gasPrice 880 (= maxFeePerGas)
 
 
-          0x371: 0  # gasPrice 881 (> feeCap, so the transaction is reverted)
+          0x371: 0  # gasPrice 881 (> maxFeePerGas, so the transaction is reverted)
           0x372: 0
           0x373: 0
           0x374: 0

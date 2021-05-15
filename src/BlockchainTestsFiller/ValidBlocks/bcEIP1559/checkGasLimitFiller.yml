@@ -55,8 +55,8 @@ checkGasLimit:
     - data: ''
       accessList: []
       gasLimit: 1000001  # 1m gas plus one
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -64,8 +64,8 @@ checkGasLimit:
     - data: ''
       accessList: []
       gasLimit: 1000000  # 1m gas
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -73,8 +73,8 @@ checkGasLimit:
     - data: ''
       accessList: []
       gasLimit: 1000000  # 1m gas
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -83,8 +83,8 @@ checkGasLimit:
       invalid: 1
       accessList: []
       gasLimit: 1000000  # 1m gas
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -99,8 +99,8 @@ checkGasLimit:
     - data: ''
       accessList: []
       gasLimit: 1000000  # 1m gas plus one
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: 4
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -108,8 +108,8 @@ checkGasLimit:
     - data: ''
       accessList: []
       gasLimit: 1000000  # 1m gas
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -117,8 +117,8 @@ checkGasLimit:
     - data: ''
       accessList: []
       gasLimit: 1000000  # 1m gas
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -126,8 +126,8 @@ checkGasLimit:
     - data: ''
       accessList: []
       gasLimit: 1000000  # 1m gas
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -141,8 +141,8 @@ checkGasLimit:
     - data: ''
       accessList: []
       gasLimit: 4000000
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -157,8 +157,8 @@ checkGasLimit:
       invalid: 1
       accessList: []
       gasLimit: 4000001
-      tip: 0x00
-      feeCap: 4000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 4000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111

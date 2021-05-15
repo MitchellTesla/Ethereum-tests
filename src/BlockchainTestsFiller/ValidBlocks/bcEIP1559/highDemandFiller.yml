@@ -66,8 +66,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 43104
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -75,8 +75,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 156896
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -89,8 +89,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 43104
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -98,8 +98,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 156896
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -112,8 +112,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 43104
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -121,8 +121,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 156896
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -134,8 +134,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 43104
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -143,32 +143,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 156896
-      tip: 0x00
-      feeCap: 2000
-      nonce: auto
-      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
-      to: 0x1111111111111111111111111111111111111111
-      value: 0x0
-
-
-
-  - blockHeader:
-      gasLimit: 200000
-    transactions:
-    - data: ''
-      accessList: []
-      gasLimit: 43104
-      tip: 0x00
-      feeCap: 2000
-      nonce: auto
-      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
-      to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-      value: 0x0
-    - data: ''
-      accessList: []
-      gasLimit: 156896
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -182,8 +158,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 43104
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -191,8 +167,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 156896
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -206,8 +182,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 43104
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -215,8 +191,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 156896
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
@@ -230,8 +206,8 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 43104
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -239,8 +215,32 @@ highDemand:
     - data: ''
       accessList: []
       gasLimit: 156896
-      tip: 0x00
-      feeCap: 2000
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
+      nonce: auto
+      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
+      to: 0x1111111111111111111111111111111111111111
+      value: 0x0
+
+
+
+  - blockHeader:
+      gasLimit: 200000
+    transactions:
+    - data: ''
+      accessList: []
+      gasLimit: 43104
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
+      nonce: auto
+      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
+      to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+      value: 0x0
+    - data: ''
+      accessList: []
+      gasLimit: 156896
+      maxPriorityFeePerGas: 0x00
+      maxFeePerGas: 2000
       nonce: auto
       secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
       to: 0x1111111111111111111111111111111111111111
