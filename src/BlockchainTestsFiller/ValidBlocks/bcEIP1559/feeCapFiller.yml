@@ -171,6 +171,48 @@ maxFeePerGas:
       to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
       value: 0x0
 
+    # Type 0 transaction with sufficiently high gasPrice
+    - data: ''
+      gasLimit: 50000	
+      gasPrice: 875
+      nonce: auto
+      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
+      to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+      value: 0x0
+   
+    # Type 1 transaction with sufficiently high gasPrice
+    - data: ''
+      accessList: []
+      gasLimit: 50000	
+      gasPrice: 875
+      nonce: auto
+      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
+      to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+      value: 0x0
+
+
+
+    # Type 0 transaction with insufficiently high gasPrice
+    - data: ''
+      invalid: 1
+      gasLimit: 50000	
+      gasPrice: 874
+      nonce: auto
+      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
+      to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+      value: 0x0
+   
+    # Type 1 transaction with insufficiently high gasPrice
+    - data: ''
+      invalid: 1
+      accessList: []
+      gasLimit: 50000	
+      gasPrice: 874
+      nonce: auto
+      secretKey: 41f6e321b31e72173f8ff2e292359e1862f24fba42fe6f97efaf641980eff298
+      to: 0xCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+      value: 0x0
+
 
 
   expect:
@@ -192,3 +234,4 @@ maxFeePerGas:
           0x373: 0
           0x374: 0
           0x375: 0  # gasPrice 885
+
